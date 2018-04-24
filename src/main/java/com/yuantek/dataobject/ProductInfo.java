@@ -1,13 +1,19 @@
 package com.yuantek.dataobject;
 
+import com.yuantek.enums.ProductStatusEnum;
 import lombok.Data;
+import org.hibernate.annotations.DynamicUpdate;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import java.math.BigDecimal;
 
+/**
+ * 商品
+ */
 @Entity
 @Data
+@DynamicUpdate
 public class ProductInfo {
     @Id
     private String productId;
@@ -22,7 +28,7 @@ public class ProductInfo {
 
     private String productIcon;
 
-    private String productStatus;
+    private Integer productStatus = ProductStatusEnum.UP.getCode();
 
     private Integer categoryType;
 }
