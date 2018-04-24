@@ -1,7 +1,8 @@
 package com.yuantek.vo;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import lombok.Data;
 
 import java.io.Serializable;
@@ -12,7 +13,8 @@ import java.io.Serializable;
  *
  * @param <T>
  */
-@JsonSerialize(include = JsonSerialize.Inclusion.NON_NULL)//只序列化不为空的属性
+//@JsonSerialize(include = JsonSerialize.Inclusion.NON_NULL)//只序列化不为空的属性
+@JsonInclude(JsonInclude.Include.NON_NULL)
 @Data
 public class ApiResponse<T> implements Serializable {
 
