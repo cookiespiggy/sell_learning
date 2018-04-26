@@ -10,6 +10,9 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
+/**
+ * 商品类目
+ */
 @Entity
 @DynamicUpdate
 @Data
@@ -19,7 +22,7 @@ public class ProductCategory {
     @GeneratedValue
     private Integer categoryId;
 
-    @Length(max = 32)
+    //@Length(max = 32)
     private String categoryName;
 
     private Integer categoryType;

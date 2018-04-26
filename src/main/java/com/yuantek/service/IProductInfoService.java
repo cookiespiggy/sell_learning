@@ -22,4 +22,8 @@ public interface IProductInfoService {
 
     ApiResponse<ProductInfo> save(ProductInfo productInfo);
 
+    // 加库存
+
+    // 减库存
+
 }
